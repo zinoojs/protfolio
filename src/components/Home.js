@@ -1,13 +1,9 @@
 import React from "react";
-import image from "../img/three.jpg";
+import pic from "../img/three.jpg";
 function Home() {
   return (
     <main>
-      <img
-        src={image}
-        alt="image"
-        className="absolute object-fit w-full h-full"
-      />
+      <img src={pic} alt="pic" className="absolute object-fit w-full h-full" />
       <section className="relative justify-center min-h-screen flex pt-52 lg:pt-64 lg:px-8">
         <h1 className="lg:text-6xl sm:text-3xl font-bold text-red-600 cursive leading-none lg:leading-snug home-name">
           Helo, I'm Kyawzinoo.

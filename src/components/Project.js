@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import sanityClient from "../client";
 function Project() {
   const [project, setProject] = useState(null);
@@ -38,7 +38,12 @@ function Project() {
               >
                 <span>
                   <h3 className="text-gray-800 hover:text-red-700 mb-2 font-bold text-3xl">
-                    <a href={project.url} target="_blank" alt={project.title}>
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      alt={project.title}
+                    >
                       {project.title}
                     </a>
                   </h3>
@@ -61,6 +66,7 @@ function Project() {
                     <a
                       href={project.link}
                       target="_blank"
+                      rel="noreferrer"
                       className="text-red-500 text-xl font-bold hover:underline hover:text-red-400"
                     >
                       View the project {""}
