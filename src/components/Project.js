@@ -29,11 +29,11 @@ function Project() {
         <h2 className="text-lg text-gray-600 flex justify-center mb-12">
           Welcome my projects page!
         </h2>
-        <section className="grid grid-cols-2 gap-8">
+        <section className="grid lg:grid-cols-2 lg:gap-8 sm:grid-cols-1">
           {project &&
             project.map((project, index2) => (
               <article
-                className="relative rounded-lg shawdow-xl bg-white p-16"
+                className="relative rounded-lg shawdow-xl bg-white p-16 mb-6"
                 key={index2}
               >
                 <span>
@@ -47,17 +47,20 @@ function Project() {
                       {project.title}
                     </a>
                   </h3>
-                  <div className="text-gray-500 text-s space-x-4">
+                  <div className="text-gray-500 text-s space-x-4 ">
+                    <br />
                     <span>
                       <strong className="font-bold">Finished on </strong>:{""}
                       {new Date(project.date).toLocaleDateString()}
                     </span>
+                    <br />
                     <span>
                       <strong className="font-bold"> Company</strong>: {""}
                       {project.place}
                     </span>
-                    <span>
-                      <strong className="font-bold">Type</strong>:{""}
+                    <br />
+                    <span className="sm:block">
+                      <strong className="font-bold ">Type</strong>:{""}
                       {project.projectType}
                     </span>
                     <p className="my-6 text-lg text-gray-700 leading-relaxed">
